@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+{% for post in posts %}
+	<figure>
+		{% if post.media %}
+		<img src="{{post.media.url}}" style="width: 300px; height: 200px;">
+		{% endif %}
+		<figcaption>{{post.content}}</figcaption>
+	</figure>
+{% endfor %}
+{% endblock %}
