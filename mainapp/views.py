@@ -8,3 +8,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 class IndexView(TemplateView):
 	template_name = 'mainapp/index.html'
+
+
+class GalleryView(ListView):
+	model = Post
+	template_name = 'mainapp/gallery.html'
+	context_object_name = "posts"
